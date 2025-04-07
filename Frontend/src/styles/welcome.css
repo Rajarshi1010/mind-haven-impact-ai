@@ -1,6 +1,8 @@
-body {
-  overflow-y: auto;
+.welcom-body {
+  overflow-y: scroll;
+  height: 100vh;
 }
+
 header {
     display: flex;
     justify-content: space-between;

@@ -18,7 +18,7 @@ function Login() {
     }
 
     try {
-      const response = await fetch('http://localhost:3000/login', {
+      const response = await fetch('https://3zrj6xr3-5000.inc1.devtunnels.ms/login', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -30,7 +30,8 @@ function Login() {
 
       if (response.ok) {
         alert(data.message || 'Login successful!');
-        window.location.href = 'home';
+        localStorage.setItem('email', JSON.stringify(email));
+        window.location.href = 'chat';
       } else {
         alert(data.error || 'Invalid email or password.');
       }

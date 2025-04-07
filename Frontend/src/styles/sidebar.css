@@ -16,7 +16,6 @@ body {
     left: 0; /* Stick to the left */
     transition: width 0.3s ease-in-out;
     background-color: #262627;
-    border-right: 1px solid #ccc;
     z-index: 10;
     height: 100vh;
     justify-content: flex-end; /* Push content to the right, including the button */
@@ -24,10 +23,13 @@ body {
 }
   
 .sidebar-container.minimized {
+    background-color: #26262700;
     width: 60px;
 }
   
 .sidebar-container.expanded {
+    color: #fff;
+    border-right: 1px solid #ccc;
     width: 200px;
 }
   

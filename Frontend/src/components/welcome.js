@@ -3,11 +3,10 @@
 export default function Welcome() {
 
   return (
-    <>
+    <div className="welcome-body">
         <header>
         <div class="logo">MindHaven</div>
             <nav>
-                <a href="#">Home</a>
                 <a href="#features">Features</a>
                 <a href="login">Login</a>
             </nav>
@@ -16,7 +15,7 @@ export default function Welcome() {
         <section class="hero">
             <h1>Welcome to MindHaven</h1>
             <p>Your private space to talk, reflect, and heal. Our AI is here to listen and support you 24/7.</p>
-            <a href="loginjs.html">Get Started</a>
+            <a href="/login">Get Started</a>
         </section>
 
     <section class="features" id="features">
@@ -37,7 +36,7 @@ export default function Welcome() {
     <footer>
         © 2025 MindHaven · Built with 💙 for your well-being
     </footer>
-  </>
+  </div>
 
   );
 }
