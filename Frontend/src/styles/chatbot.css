@@ -1,0 +1,117 @@
+.chat-circle:hover {
+    background-color: #424242;
+}
+
+.bot-icon-circle {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+.chat-window {
+    width: 50vw;
+    height: 90vh;
+    margin-top: 5vh;
+    margin-right: 15vw;
+    background-color: #00000000;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.bot-profile {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.chat-box {
+    flex-grow: 1;
+    padding: 10px 15px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.user-message-container, .bot-message-container {
+    font-size: smaller;
+    display: flex;
+    margin-bottom: 10px;
+    align-items: flex-start;
+    width: auto;
+}
+
+.user-message-container {
+    justify-content: flex-end;
+}
+
+.bot-message-container {
+    justify-content: flex-start;
+}
+
+.user-message, .bot-message {
+    padding: 8px 12px;
+    border-radius: 8px;
+    max-width: 70%;
+    word-wrap: break-word;
+}
+
+.chat-input-container {
+    display: flex;
+    padding: 10px 15px; 
+    align-items: center;
+    background-color: #262627; 
+    border-radius: 35px;
+}
+
+.voice-btn, .send-btn {
+    background-color: #262627; 
+    color: #fff;
+    border: none;
+    padding: 8px;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-right: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.3s ease;
+}
+
+.voice-btn:hover, .send-btn:hover {
+    background-color: #262627; 
+}
+
+.chat-input {
+    flex-grow: 1;
+    padding: 8px;
+    margin-right: 8px;
+    background-color: #262627; 
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    border: #262627;
+    color: #fff;
+}
+
+.chat-input:focus {
+    outline: none;
+}
+
+.chat-box::-webkit-scrollbar, .contact-form textarea::-webkit-scrollbar {
+    width: 8px; /* Width of the scrollbar */
+}
+
+.chat-box::-webkit-scrollbar-track, .contact-form textarea::-webkit-scrollbar-track {
+    background-color: #333; /* Dark background for the track */
+}
+
+.chat-box::-webkit-scrollbar-thumb, .contact-form textarea::-webkit-scrollbar-thumb {
+    background-color: #555; /* Slightly lighter dark color for the thumb */
+    border-radius: 4px; /* Rounded corners for the thumb */
+}
+
+.chat-box::-webkit-scrollbar-thumb:hover, .contact-form textarea::-webkit-scrollbar-thumb:hover {
+    background-color: #666; /* Even lighter dark color on hover */
+}
