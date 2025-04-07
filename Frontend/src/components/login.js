@@ -36,7 +36,7 @@ function Login() {
 
       if (response.ok) {
         alert(data.message || 'Login successful!');
-        // window.location.href = 'dashboard.html';
+        window.location.href = 'home.html';
       } else {
         alert(data.error || 'Invalid email or password.');
       }
