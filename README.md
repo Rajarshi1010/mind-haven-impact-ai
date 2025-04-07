@@ -76,7 +76,7 @@ Mental health is as important as physical health, yet it often gets overlooked. 
 
 ### Backend (Flask)
 1. Clone the repository:
-git clone https://github.com/yourusername/mind-haven.git
+git clone https://github.com/Rajarshi1010/mind-haven-impact-ai.git
 cd mind-haven/backend
 
 text
