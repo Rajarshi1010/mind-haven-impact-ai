@@ -85,8 +85,8 @@
     color: #444;
   }
 
-  input[type="email"],
-  input[type="password"] {
+  input[id="email"],
+  input[id="password"] {
     width: 100%;
     padding: 12px;
     background-color: #fff0f5; /* light pink */
@@ -98,8 +98,8 @@
     font-family: 'Poppins', sans-serif;
   }
 
-  input[type="email"]:focus,
-  input[type="password"]:focus {
+  input[id="email"]:focus,
+  input[id="password"]:focus {
     border-color: #4A90E2;
     background-color: #fff;
     outline: none;
@@ -107,8 +107,8 @@
 
   .toggle-password {
     position: absolute;
-    right: 12px;
-    top: 39px;
+    right: 0.2vw;
+    top: 6.5vh;
     cursor: pointer;
     font-size: 14px;
     color: #888;
