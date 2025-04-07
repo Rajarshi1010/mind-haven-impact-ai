@@ -1,138 +1,79 @@
 body {
-    margin: 0;
-    font-family: "Poppins", sans-serif;
-    font-weight: 600;
-    font-style: normal;
     background-image: url('https://png.pngtree.com/background/20250102/original/pngtree-pastel-texture-watercolor-shading-blue-and-pink-background-simple-picture-image_15153267.jpg');
     background-repeat: no-repeat;
     background-size: cover;
+    overflow-y: hidden;
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    font-style: normal;
 }
 
-.background {
+.sidebar-container {
     display: flex;
-    flex-direction: row;
-    width: 100vw;
-    height: 100vh;
-}
-
-.minimize-button {
-    position: relative;
-    background-color: #ffffff00;
-    border: none;
-}
-
-.nav {
+    flex-direction: row; /* Keep row direction */
+    position: fixed;
+    top: 0;
+    left: 0; /* Stick to the left */
+    transition: width 0.3s ease-in-out;
     background-color: #262627;
+    border-right: 1px solid #ccc;
+    z-index: 10;
     height: 100vh;
-    width: 20vw;
-    flex-direction: column;
-    align-items: center;
-    position: relative;
+    justify-content: flex-end; /* Push content to the right, including the button */
+    overflow: hidden;
 }
-
-.curved-nav a {
-    color: #fff;
-    text-decoration: none;
-    padding: 0.7em 1.2em;
-    margin-top: 2vh;
-    border-radius: 5px;
-    transition: color 0.3s ease, background-color 0.3s ease;
+  
+.sidebar-container.minimized {
+    width: 60px;
 }
-
-.curved-nav a:hover {
-    color: #ddd;
-    background-color: #363638;
+  
+.sidebar-container.expanded {
+    width: 200px;
 }
-
-.dropdown {
-    position: relative;
+  
+.sidebar-content {
+    flex-grow: 1; /* Take up remaining space */
+    padding: 10px;
+    transition: opacity 0.3s ease-in-out, margin-right 0.3s ease-in-out; /* Changed to margin-right */
+    order: -1; /* Place content before the button in flex order */
 }
-
-.dropbtn {
-    background: none;
+  
+.sidebar-container.minimized .sidebar-content {
+    opacity: 0;
+    margin-right: -100%; /* Move content out to the left */
+}
+  
+.sidebar-container.expanded .sidebar-content {
+    opacity: 1;
+    margin-right: 0;
+}
+  
+.minimize-button {
+    background-color: #262627;
     border: none;
-    padding: 0.7em 1.2em;
-    margin: 0 1em;
-    color: #555;
-    text-decoration: none;
+    padding: 10px;
     cursor: pointer;
-    border-radius: 5px;
-    transition: color 0.3s ease, background-color 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease-in-out;
 }
-
-.dropbtn:hover {
-    color: #28a745;
-    background-color: #d1e7dd;
+  
+.sidebar-container.minimized .minimize-button {
+    position: fixed;
+    top: 0px;
 }
-
-.dropdown-content {
-    display: none;
-    width: max-content;
-    position: absolute;
-    top: 100%;
-    left: 20%;
-    right: 0;
-    background-color: #f9f9f9;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    border-radius: 5px;
-    padding: 0.5em 0;
-    z-index: 1;
-    pointer-events: auto; /* Ensure the dropdown content is interactive */
+  
+.sidebar-container.expanded .minimize-button {
+    position: fixed;
+    top: 0px;
 }
-
-.dropdown-content a {
-    color: #555;
-    padding: 0.8em 1.2em;
-    text-decoration: none;
-    display: block;
-    transition: background-color 0.3s ease, color 0.3s ease;
-    margin: 0;
+  
+.sidebar-container.minimized nav p {
+    opacity: 0;
 }
-
-.dropdown-content a:hover {
-    background-color: #eee;
-    color: #28a745;
-}
-
-/* Show the dropdown content when the dropdown is hovered */
-.dropdown:hover .dropdown-content {
-    display: block;
-}
-
-/* Ensure the dropdown stays open when hovering over the content itself */
-.dropdown:hover .dropdown-content,
-.dropdown-content:hover {
-    display: block;
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-    .header .container, .hero .container {
-        flex-direction: column;
-        text-align: center;
-    }
-    .hero-content {
-        padding-right: 0;
-        margin-bottom: 2em;
-    }
-    .curved-nav {
-        margin-top: 1em;
-        padding: 0.5em;
-        flex-direction: column;
-        align-items: center;
-    }
-    .curved-nav a, .dropbtn {
-        margin: 0.5em 0;
-    }
-    .dropdown-content {
-        position: static;
-        transform: none;
-        width: 100%;
-        border-radius: 0;
-        box-shadow: none;
-        padding: 0;
-    }
-    .dropdown:hover .dropdown-content {
-        display: none; /* Keep hidden by default on small screens */
-    }
+ 
+.sidebar-container.expanded nav p {
+    opacity: 1;
+    transition: opacity 0.3s ease-in-out 0.1s;
 }

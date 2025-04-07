@@ -8,29 +8,11 @@ export default function Chatbot() {
     const [isVoiceRecording, setIsVoiceRecording] = useState(false);
     const [mediaRecorder, setMediaRecorder] = useState(null);
     const [audioChunks, setAudioChunks] = useState([]);
-
-    // useEffect(() => {
-    //     const fetchChats = async () => {
-    //         try {
-    //             // const res = await axios.get(`${process.env.REACT_APP_BACKEND_URL}/chat/history`, { withCredentials: true });
-    //             displayHistory(res.data.chats);
-    //         } catch (error) {
-    //             // console.error('Failed to load chat history', error);
-    //         }
-    //     };
-    //     fetchChats();
-    // }, []);
+    const [audioMode, setAudioMode] = useState(false)
 
     useEffect(() => {
         scrollToBottom();
     }, [messages]);
-
-    // const displayHistory = (chatHistory) => {
-    //     chatHistory.forEach((chat) => {
-    //         setMessages(prevMessages => [...prevMessages, { sender: 'user', text: chat.messages[0].text }]);
-    //         setMessages(prevMessages => [...prevMessages, { sender: 'bot', text: chat.messages[1].text }]);
-    //     });
-    // };
 
     const scrollToBottom = () => {
         if (chatBoxRef.current) {
@@ -45,13 +27,19 @@ export default function Chatbot() {
             messageInputRef.current.value = '';
 
             try {
-                const botResponse = await getBotResponse(textToSend, fileToSend);
+                const data = await getBotResponse(textToSend);
+                const botResponse = data.response
+                const audioBlob = new Blob([Uint8Array.from(atob(data.audio), c => c.charCodeAt(0))], { type: 'audio/mp3' });
+                const audioUrl = URL.createObjectURL(audioBlob);
+                const audio = new Audio(audioUrl);
+                audio.play();
                 if (typeof botResponse === 'string') {
                     setMessages(prevMessages => [...prevMessages, { sender: 'bot', text: botResponse }]);
                 } else if (typeof botResponse === 'object') {
                     setMessages(prevMessages => [...prevMessages, { sender: 'bot', ...botResponse }]);
                 }
             } catch (error) {
+                console.log(error)
                 setMessages(prevMessages => [...prevMessages, { sender: 'bot', text: 'Sorry, I encountered an error.' }]);
             }
         }
@@ -168,20 +156,15 @@ export default function Chatbot() {
         }
     };
 
-    async function getBotResponse(userMessage, attachedFile) {
+    async function getBotResponse(userMessage) {
         try {
-            // const formData = new FormData();
-            // formData.append('message', userMessage);
-            // if (attachedFile) {
-            //     // Convert Data URL to Blob for sending
-            //     const fileBlob = await fetch(attachedFile.dataURL).then(r => r.blob());
-            //     formData.append('file', fileBlob, attachedFile.name);
-
-            // const response = await axios.post(`${process.env.REACT_APP_BACKEND_URL}/chat/send`, {
-            //     message: userMessage
-            // }, { withCredentials: true });
-            
-            // return response.data.response;
+            const res = await fetch('https://3zrj6xr3-5000.inc1.devtunnels.ms/get_response', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ text: userMessage })
+            });
+            const data = await res.json();
+            return data
 
         } catch (error) {
             console.error('Error fetching bot response:', error);
@@ -209,7 +192,7 @@ export default function Chatbot() {
                                 type="text"
                                 id="chat-input"
                                 className="chat-input"
-                                placeholder="Ask anythind"
+                                placeholder="Ask anything"
                                 ref={messageInputRef}
                                 onKeyPress={(event) => {
                                     if (event.key === 'Enter') {

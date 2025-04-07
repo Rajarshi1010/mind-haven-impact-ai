@@ -26,6 +26,11 @@
     margin-right: 10px;
 }
 
+.chatbot-container {
+    position: relative;
+    left: 25vw;
+}
+
 .chat-box {
     flex-grow: 1;
     padding: 10px 15px;
