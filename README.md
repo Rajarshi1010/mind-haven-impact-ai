@@ -37,27 +37,15 @@ Mental health is as important as physical health, yet it often gets overlooked. 
 - **"Start the day on a positive note."**  
   Receive personalized motivational affirmations based on your mood or inputs.
 
-### **5. Stress Level Detection**  
-- **"Stay ahead of stress."**  
-  Simulate stress levels based on self-reports or wearable device data like heart rate and sleep patterns.
-
-### **6. Crisis Alert System**  
-- **"Help is just one tap away."**  
-  Trigger automated messages to emergency contacts or access verified mental health resources with a single button.
-
-### **7. Chatbot Interaction**  
+### **5. Chatbot Interaction**  
 - **"A friend who listens."**  
   Engage with an empathetic chatbot for conversational support and coping strategies.
 
-### **8. Gamified Coping Mechanisms**  
+### **6. Gamified Coping Mechanisms**  
 - **"Turn stress into fun!"**  
   Play mini-games like puzzles or coloring tools designed to distract and relax you while earning rewards.
 
-### **9. Resource Library**  
-- **"Knowledge is power."**  
-  Access a curated library of articles, videos, and exercises on topics like anxiety, depression, and stress management.
-
-### **10. Anonymous Peer Support**  
+### **7. Anonymous Peer Support**  
 - **"Share without fear."**  
   Connect with others anonymously in a moderated community forum to share feelings and experiences safely.
 
