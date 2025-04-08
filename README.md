@@ -41,11 +41,7 @@ Mental health is as important as physical health, yet it often gets overlooked. 
 - **"A friend who listens."**  
   Engage with an empathetic chatbot for conversational support and coping strategies.
 
-### **6. Gamified Coping Mechanisms**  
-- **"Turn stress into fun!"**  
-  Play mini-games like puzzles or coloring tools designed to distract and relax you while earning rewards.
-
-### **7. Anonymous Peer Support**  
+### **6. Anonymous Peer Support**  
 - **"Share without fear."**  
   Connect with others anonymously in a moderated community forum to share feelings and experiences safely.
 
@@ -71,8 +67,6 @@ Mental health is as important as physical health, yet it often gets overlooked. 
 ## 🛠️ Additional Tools & Services
 - Icons8 / Font Awesome - For clean and relevant icons
 - Version Control - Git & GitHub for collaboration
-
-
 
 ---
 
