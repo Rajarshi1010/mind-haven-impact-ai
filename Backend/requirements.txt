@@ -1,0 +1,16 @@
+Flask
+Flask-SQLAlchemy
+Flask-Bcrypt
+Flask-Cors
+transformers
+torch
+google-auth
+google-auth-oauthlib
+google-auth-httplib2
+google-generativeai
+requests
+Werkzeug
+pytz
+textblob
+numpy
+matplotlib
