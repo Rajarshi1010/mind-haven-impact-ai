@@ -29,7 +29,7 @@ const SentimentAnalysis = () => {
             <nav>
                 <a href='/home'>Home</a>
                 <a href='/chat'>Chat</a>
-                <a href=''>ournal</a>
+                <a href=''>Journal</a>
                 <a href='/insight'>Insights</a>
                 <a href='/'>Logout</a>
             </nav>

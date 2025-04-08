@@ -35,8 +35,8 @@ const MoodInsights = ({ userId }) => {
             <nav>
                 <a href='/home'>Home</a>
                 <a href='/chat'>Chat</a>
-                <a href=''>Community</a>
-                <a href='/insight'>Insights</a>
+                <a href='/journal'>Journal</a>
+                <a href=''>Insights</a>
                 <a href='/'>Logout</a>
             </nav>
         </header>

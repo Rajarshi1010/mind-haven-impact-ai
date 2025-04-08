@@ -8,7 +8,7 @@ export default function Home() {
                 <nav>
                     <a href=''>Home</a>
                     <a href='/chat'>Chat</a>
-                    <a href='/journal'>Community</a>
+                    <a href='/journal'>Journal</a>
                     <a href='/insight'>Insights</a>
                     <a href='/'>Logout</a>
                 </nav>
