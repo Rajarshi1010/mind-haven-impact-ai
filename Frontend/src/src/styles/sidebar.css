@@ -1,0 +1,81 @@
+body {
+    background-image: url('https://png.pngtree.com/background/20250102/original/pngtree-pastel-texture-watercolor-shading-blue-and-pink-background-simple-picture-image_15153267.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow-y: hidden;
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+}
+
+.sidebar-container {
+    display: flex;
+    flex-direction: row; /* Keep row direction */
+    position: fixed;
+    top: 0;
+    left: 0; /* Stick to the left */
+    transition: width 0.3s ease-in-out;
+    background-color: #262627;
+    z-index: 10;
+    height: 100vh;
+    justify-content: flex-end; /* Push content to the right, including the button */
+    overflow: hidden;
+}
+  
+.sidebar-container.minimized {
+    background-color: #26262700;
+    width: 60px;
+}
+  
+.sidebar-container.expanded {
+    color: #fff;
+    border-right: 1px solid #ccc;
+    width: 200px;
+}
+  
+.sidebar-content {
+    flex-grow: 1; /* Take up remaining space */
+    padding: 10px;
+    transition: opacity 0.3s ease-in-out, margin-right 0.3s ease-in-out; /* Changed to margin-right */
+    order: -1; /* Place content before the button in flex order */
+}
+  
+.sidebar-container.minimized .sidebar-content {
+    opacity: 0;
+    margin-right: -100%; /* Move content out to the left */
+}
+  
+.sidebar-container.expanded .sidebar-content {
+    opacity: 1;
+    margin-right: 0;
+}
+  
+.minimize-button {
+    background-color: #262627;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease-in-out;
+}
+  
+.sidebar-container.minimized .minimize-button {
+    position: fixed;
+    top: 0px;
+}
+  
+.sidebar-container.expanded .minimize-button {
+    position: fixed;
+    top: 0px;
+}
+  
+.sidebar-container.minimized nav p {
+    opacity: 0;
+}
+ 
+.sidebar-container.expanded nav p {
+    opacity: 1;
+    transition: opacity 0.3s ease-in-out 0.1s;
+}
