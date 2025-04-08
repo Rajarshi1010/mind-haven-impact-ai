@@ -31,7 +31,7 @@ function Login() {
       if (response.ok) {
         alert(data.message || 'Login successful!');
         localStorage.setItem('email', JSON.stringify(email));
-        window.location.href = 'chat';
+        window.location.href = 'home';
       } else {
         alert(data.error || 'Invalid email or password.');
       }

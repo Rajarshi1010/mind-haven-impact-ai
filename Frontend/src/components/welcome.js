@@ -1,5 +1,3 @@
-// import React, { useState } from 'react';
-
 export default function Welcome() {
 
   return (
@@ -7,8 +5,8 @@ export default function Welcome() {
         <header>
         <div class="logo">MindHaven</div>
             <nav>
-                <a href="#features">Features</a>
-                <a href="login">Login</a>
+                <a href="/create">Sign up</a>
+                <a href="/login">Login</a>
             </nav>
         </header>
 

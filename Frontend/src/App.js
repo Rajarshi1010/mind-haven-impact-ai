@@ -2,18 +2,22 @@ import Login from "./components/login";
 import Create from "./components/create";
 import Welcome from "./components/welcome";
 import Support from './components/support';
-import Settings from "./components/settings";
 import Chatbot from "./components/chatbot";
 import Forgot from "./components/forgot";
+import Home from "./components/home";
+import SentimentAnalysis from "./components/sentiment";
+import MoodInsights from "./components/chart";
 import { Routes, Route } from "react-router-dom";
 import "./styles/login.css";
 import "./styles/sidebar.css";
 import "./styles/chatbot.css";
 import "./styles/support.css";
-import "./styles/settings.css";
 import "./styles/welcome.css";
 import "./styles/forgot.css";
-// import 
+import "./styles/home.css";
+import "./styles/tracker.css";
+import "./styles/chart.css";
+import "./styles/sentiment.css"
 
 
 function App(){
@@ -30,8 +34,10 @@ function App(){
         <Route path="/create" element={<Create />} />
         <Route path="/login" element={<Login />} />
         <Route path="/support" element={<Support />} />
-        <Route path="/settings" element={<Settings />} />
         <Route path="/forgot" element={<Forgot />} />
+        <Route path="/home" element={<Home />} />
+        <Route path="/insight" element={<MoodInsights />} />
+        <Route path="/journal" element={<SentimentAnalysis />} />
       </Routes>
     </div>
   )

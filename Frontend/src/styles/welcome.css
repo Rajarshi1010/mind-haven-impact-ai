@@ -1,7 +1,7 @@
-.welcom-body {
+/* .welcom-body {
   overflow-y: scroll;
   height: 100vh;
-}
+} */
 
 header {
     display: flex;
@@ -37,6 +37,7 @@ header {
 
   .hero {
     display: flex;
+    max-height: 20vh;
     flex-direction: column;
     justify-content: center;
     align-items: center;

@@ -2,7 +2,7 @@ body {
     background-image: url('https://png.pngtree.com/background/20250102/original/pngtree-pastel-texture-watercolor-shading-blue-and-pink-background-simple-picture-image_15153267.jpg');
     background-repeat: no-repeat;
     background-size: cover;
-    overflow-y: hidden;
+    overflow-y: auto;
     font-family: "Poppins", sans-serif;
     font-weight: 600;
     font-style: normal;

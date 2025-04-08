@@ -4,20 +4,20 @@
     padding: 30px;
   }
 
-  h2 {
+.home-h2 {
     color: #694d75;
-  }
+}
 
-  .top-section {
+.top-section {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
     flex-wrap: wrap;
     margin-bottom: auto;
-  }
+}
 
-  .chart-section,
-  .mood-section {
+.chart-section,
+.mood-section {
     background-color: #fff0f7;
     padding: 20px;
     border-radius: 16px;
@@ -28,40 +28,40 @@
     box-shadow: 0 0 20px rgba(0,0,0,0.05);
     transition: all 0.3s ease;
     margin-bottom: 20px;
-  }
+}
 
-  .mood-input {
+.mood-input {
     display: flex;
     flex-direction: column;
     gap: 10px;
     align-items: center;
-  }
+}
 
-  select, button {
+.home-select, .home-button {
     padding: 10px;
     border-radius: 8px;
     border: 1px solid #ddd;
     font-size: 16px;
-  }
+}
 
-  button {
+.home-button {
     background-color: #d9b8ff;
     color: #4a4a4a;
     cursor: pointer;
     transition: background 0.3s;
-  }
+}
 
-  button:hover {
+.home-button:hover {
     background-color: #c39dff;
-  }
+}
 
-  #moodResponse {
+#moodResponse {
     margin-top: 10px;
     font-size: 18px;
     color: #6e6e6e;
-  }
+}
 
-  .features-box {
+.features-box {
     background-color: #ffeefd;
     padding: 20px;
     border-radius: 16px;
@@ -72,37 +72,37 @@
     box-shadow: 0 0 20px rgba(0,0,0,0.05);
     border-top: 1px solid #f7dfff;
     transition: all 0.3s ease;
-  }
+}
 
-  .features-grid {
+.features-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
     gap: 20px;
     margin-top: 20px;
-  }
+}
 
-  .feature-card {
+.feature-card {
     background-color: #fff;
     padding: 15px;
     border: 1px solid #f3d8ff;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0,0,0,0.05);
     transition: 0.3s;
-  }
+}
 
-  .feature-card:hover {
+.feature-card:hover {
     background-color: #fdf3ff;
     transform: translateY(-5px);
-  }
+}
 
-  .quote-box {
+.quote-box {
     margin-top: 30px;
     font-size: 16px;
     font-style: italic;
     color: #8a8a8a;
-  }
+}
 
-  @media (max-width: 1000px) {
+@media (max-width: 1000px) {
     .chart-section,
     .mood-section {
       width: 100%;
@@ -117,4 +117,4 @@
     .features-box {
       width: 100%;
     }
-  }
+}
