@@ -20,6 +20,7 @@ from textblob import TextBlob
 import numpy as np
 import matplotlib.pyplot as plt
 import matplotlib
+from dotenv import load_dotenv
 
 """CONFIGURATIONS START"""
 
@@ -105,7 +106,9 @@ class MoodEntry(db.Model):
     mood_note = db.Column(db.Text, nullable=True)  # Optional note about mood
     sentiment = db.Column(db.Float, nullable=True)  # Sentiment score from TextBlob
     timestamp = db.Column(db.DateTime, default=datetime.now(tz('Asia/Kolkata')))
-
+    
+load_dotenv()
+access_token = os.getenv("ACCESS_TOKEN")
 
 with app.app_context():
     db.create_all()
@@ -211,7 +214,6 @@ def login():
 
 def text_to_speech(text):
     try:
-        access_token = "ya29.a0AZYkNZjE65V10B81Cz_FNVxqdtHDIgxmHQaPrn0o7b_CyNjHYZtlhaHKDLzuf0V18nwm7YIYH2XA4L_KwGnRljHfvCtgFjW-Esqq71LF6zJ_o6heMIJ5llwDOiQDwbY4cKwLCg1GptyCguDsjiLAoDpLNTMCY6qoZJGTGsDf5icW6kQaCgYKAc0SARESFQHGX2Mi9wAD1LO43A_gRBG4Ze5b6Q0182"
         url = "https://texttospeech.googleapis.com/v1/text:synthesize"
         headers = {
             "Authorization": f"Bearer {access_token}",
