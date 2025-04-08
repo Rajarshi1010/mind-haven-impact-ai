@@ -125,6 +125,18 @@ We welcome contributions from the community! Here's how you can get involved:
 4. Push to the branch (`git push origin feature-name`).
 5. Create a pull request.
 
+![image](https://github.com/user-attachments/assets/71b6eaf2-0639-43c6-9a1e-2b3020b01881) <br>
+mood tracker
+
+![image1](https://github.com/user-attachments/assets/013e61bf-5e3d-496e-9518-54aa0c817f45) <br>
+personalised reccomendations
+
+![image3](https://github.com/user-attachments/assets/3fa6fbe7-832e-4a65-94b9-70eca023bd2a) <br>
+journal to provide diary entry
+
+![image4](https://github.com/user-attachments/assets/a04668ce-fd12-4326-a971-415d337dc387) <br>
+graphical visualisation of mental health over a week, month, 3 months
+
 ---
 
 ## 📜 License
