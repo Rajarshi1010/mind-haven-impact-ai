@@ -51,12 +51,28 @@ Mental health is as important as physical health, yet it often gets overlooked. 
 
 ---
 
-## 🛠️ Tech Stack
-- **Frontend:** React.js
-- **Backend:** Flask
-- **AI/ML:** Pre-trained models (e.g., Hugging Face transformers) for sentiment analysis and chatbot functionality
-- **Database:** SQLite (or any preferred database)
-- **Visualization:** Chart.js/D3.js for mood trends
+# 🧠 Mind Haven: Tech Stack
+
+## 🌟 Frontend
+- HTML5, CSS3 - For a responsive, pastel-themed user interface
+- JavaScript - To add interactivity and dynamic features
+- React.js - Component-based UI library powering our interactive user experience
+
+## ⚙️ Backend
+- Python - For sentiment analysis and chatbot logic
+- Flask - Lightweight backend framework (planned)
+- SQLite - Database solution storing user mood data and text entries with minimal configuration
+
+## 🤖 AI Models
+- Google AI Studio - Fine tuned a gemini model
+- distilbert-base-uncased-finetuned - Emotion Detection HuggingFace Model
+- TextBlob - Natural language processing library powering sentiment analysis of user entries
+
+## 🛠️ Additional Tools & Services
+- Icons8 / Font Awesome - For clean and relevant icons
+- Version Control - Git & GitHub for collaboration
+
+
 
 ---
 
